@@ -1,0 +1,83 @@
+BL51 BANKED LINKER/LOCATER V6.11                                                        11/12/2024  18:38:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.11, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE laba2.obj TO laba2 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  laba2.obj (LABA2)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  laba2 (LABA2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0017H     UNIT         ?PR?MAIN?LABA2
+            CODE    0817H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   laba2 (LABA2)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LABA2
+
+
+
+SYMBOL TABLE OF MODULE:  laba2 (LABA2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LABA2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0080H.0       PUBLIC        P1
+  B:0080H.1       PUBLIC        P2
+  B:0080H.2       PUBLIC        P3
+  B:0080H.3       PUBLIC        P4
+  B:00B0H.2       PUBLIC        P3_2
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0800H         LINE#         8
+  C:0800H         LINE#         10
+  C:0800H         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.11                                                      11/12/2024  18:38:39  PAGE 2
+
+
+  C:0803H         LINE#         13
+  C:0805H         LINE#         14
+  C:0807H         LINE#         15
+  C:0809H         LINE#         16
+  C:080BH         LINE#         17
+  C:080DH         LINE#         19
+  C:080FH         LINE#         20
+  C:0811H         LINE#         21
+  C:0813H         LINE#         22
+  C:0815H         LINE#         23
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LABA2
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0017H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=38
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,79 @@
+BL51 BANKED LINKER/LOCATER V6.11                                                        11/12/2024  17:29:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.11, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE laba1.obj TO laba1_aduk RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  laba1.obj (LABA1)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  laba1_aduk (LABA1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0005H     UNIT         ?PR?MAIN?LABA1
+            CODE    0811H     0004H     UNIT         ?PR?SVGORIT?LABA1
+
+
+
+OVERLAY MAP OF MODULE:   laba1_aduk (LABA1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LABA1
+
+?PR?MAIN?LABA1
+  +--> ?PR?SVGORIT?LABA1
+
+
+
+SYMBOL TABLE OF MODULE:  laba1_aduk (LABA1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LABA1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:080CH         PUBLIC        main
+  C:0811H         PUBLIC        svGorit
+  -------         PROC          SVGORIT
+  C:0811H         LINE#         3
+  C:0811H         LINE#         4
+BL51 BANKED LINKER/LOCATER V6.11                                                      11/12/2024  17:29:40  PAGE 2
+
+
+  C:0814H         LINE#         7
+  -------         ENDPROC       SVGORIT
+  -------         PROC          MAIN
+  C:080CH         LINE#         9
+  C:080CH         LINE#         10
+  C:080FH         LINE#         11
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LABA1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0009H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=24
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

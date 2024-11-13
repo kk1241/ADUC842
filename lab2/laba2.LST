@@ -1,0 +1,48 @@
+C51 COMPILER V8.12   LABA2                                                                 11/12/2024 18:38:39 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE LABA2
+OBJECT MODULE PLACED IN laba2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE laba2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          
+   2          
+   3          sbit P3_2 = 0xB2;   
+   4          sbit P1 = 0x80;
+   5          sbit P2 = 0x81;
+   6          sbit P3 = 0x82;
+   7          sbit P4 = 0x83;
+   8          void main(){
+   9   1         
+  10   1         while(1){
+  11   2              if (P3_2 == 0){
+  12   3      
+  13   3         P1 = 1;
+  14   3         P2 = 1;
+  15   3         P3 = 1;
+  16   3         P4 = 1;
+  17   3         }
+  18   2          else 
+  19   2              P1 = 0;
+  20   2              P2 = 0;
+  21   2              P3 = 0;
+  22   2          P4 = 0;
+  23   2        };
+  24   1      } 
+  25          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     23    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,29 @@
+C51 COMPILER V8.12   LABA1                                                                 11/12/2024 18:00:49 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE LABA1
+OBJECT MODULE PLACED IN laba1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE laba1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <ADUC842.H>
+   2          
+   3          sbit P3_2 = 0xB2;   
+   4          sbit 
+   5          void main(){
+*** ERROR C141 IN LINE 5 OF LABA1.C: syntax error near 'void', expected '<id>'
+   6             
+   7             while(1){
+   8                  if (P3_2 == 0){
+   9             P0 = 7;
+  10             }
+*** ERROR C141 IN LINE 10 OF LABA1.C: syntax error near '}'
+  11              else P0 = 0;
+*** ERROR C231 IN LINE 11 OF LABA1.C: 'P0': redefinition
+*** ERROR C231 IN LINE 11 OF LABA1.C: 'P0': redefinition
+  12            };
+*** ERROR C141 IN LINE 12 OF LABA1.C: syntax error near '}'
+  13          } 
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  5 ERROR(S)
